@@ -7,32 +7,60 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginBottom="312dp"
+        android:background="@color/colorPrimary"
+        android:text="Camara"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnMath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="417dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="56dp"
         android:background="@color/colorPrimary"
         android:text="Calculadora"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBrowser"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnBrowser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="239dp"
-        android:layout_marginBottom="417dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="111dp"
         android:background="@color/colorPrimary"
         android:text="Internet"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtMath"
+        android:layout_width="81dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="592dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMath"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtBrowse"
+        android:layout_width="171dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBrowser" />
 </androidx.constraintlayout.widget.ConstraintLayout>
