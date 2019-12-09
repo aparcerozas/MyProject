@@ -73,13 +73,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBrowser" />
 
-    <ImageView
-        android:id="@+id/imgCamera"
-        android:layout_width="158dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@color/colorPrimary" />
 </androidx.constraintlayout.widget.ConstraintLayout>
