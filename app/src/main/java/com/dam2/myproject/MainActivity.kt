@@ -10,13 +10,14 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.provider.MediaStore
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.jetbrains.anko.longToast
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
+import org.jetbrains.anko.colorAttr
 
 
 val REQUEST_IMAGE_CAPTURE = 1
@@ -39,6 +40,11 @@ class MainActivity : Activity() {
 
         btnCamera.setOnClickListener{ view ->
             camera(view)
+        }
+
+        btnOther.setOnClickListener{ view ->
+            val colortxt = txtOther.text.toString()
+            layout.setBackgroundColor(Color.parseColor(colortxt))
         }
     }
 
