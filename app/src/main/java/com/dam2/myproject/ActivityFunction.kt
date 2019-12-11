@@ -1,8 +1,10 @@
 package com.dam2.myproject
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_function.*
+import org.jetbrains.anko.longToast
 
 class ActivityFunction : AppCompatActivity() {
 
@@ -10,36 +12,37 @@ class ActivityFunction : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_function)
 
-        //Función de suma de los números especificados en las dos cajas de texto numéricas superiores
-        btnSuma.setOnClickListener{
-            val num1 = Integer.parseInt(txtNum1.text.toString())
-            val num2 = Integer.parseInt(txtNum2.text.toString())
-            val suma = num1 + num2
-            txtResult.setText(suma.toString())
-        }
+        //El usuario debe responder a las 3 preguntas matemáticas planteadas
 
-        //Función de resta de los números especificados en las dos cajas de texto numéricas superiores
-        btnResta.setOnClickListener{
-            val num1 = Integer.parseInt(txtNum1.text.toString())
-            val num2 = Integer.parseInt(txtNum2.text.toString())
-            val resta = num1 - num2
-            txtResult.setText(resta.toString())
-        }
+        btnRespond.setOnClickListener { view ->
+            //Se recogen las tres repuestas
+            val num1 = txtResult.text.toString()
+            val num2 = txtColor2.text.toString()
+            val num3 = txtColor3.text.toString()
 
-        //Función de multiplicación de los números especificados en las dos cajas de texto numéricas superiores
-        btnProducto.setOnClickListener{
-            val num1 = Integer.parseInt(txtNum1.text.toString())
-            val num2 = Integer.parseInt(txtNum2.text.toString())
-            val producto = num1 * num2
-            txtResult.setText(producto.toString())
-        }
+            //Si la repuesta es correcta, la caja de la pregunta se colorea de verde
+            //Si no, se colorea de rojo
+            if (num1 == "42") {
+                txtQuestion1.setBackgroundColor(Color.parseColor("#00FF00"))
+            }
+            else{txtQuestion1.setBackgroundColor(Color.parseColor("#FF0000"))}
 
-        //Función de división de los números especificados en las dos cajas de texto numéricas superiores
-        btnDivision.setOnClickListener{
-            val num1 = Integer.parseInt(txtNum1.text.toString())
-            val num2 = Integer.parseInt(txtNum2.text.toString())
-            val division = num1 / num2
-            txtResult.setText(division.toString())
+            if (num2 == "9") {
+                txtQuestion2.setBackgroundColor(Color.parseColor("#00FF00"))
+            }
+            else{txtQuestion2.setBackgroundColor(Color.parseColor("#FF0000"))}
+
+            if (num3 == "5050") {
+                txtQuestion3.setBackgroundColor(Color.parseColor("#00FF00"))
+            }
+            else{txtQuestion3.setBackgroundColor(Color.parseColor("#FF0000"))}
+
+            //Si las tres respuestas son correctas, se muestra un longToast acorde a ello
+            if(num1 == "42" && num2 == "9" && num3 == "5050") {
+                longToast("Todas las repuestas correctas")
+            }
+            else{longToast("Alguna/s de las repuestas es incorrecta")}
+
         }
     }
 }

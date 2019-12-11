@@ -17,10 +17,9 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Búsqueda en Google Chrome de la página web escrita en la caja de texto del programa
+        //Utilizo un Intent para acceder a la Activity de Internet
         btnBrowser.setOnClickListener{ view ->
-            val url = txtBrowse.text.toString()
-            browse(url)
+
         }
 
         //Utilizo un Intent para acceder a la Activity de la Calculadora
@@ -29,16 +28,16 @@ class MainActivity : Activity() {
             startActivity(intent)
         }
 
-        //Utilizo un Intent para acceder a la Activity de la cámara
+        //Utilizo un Intent para acceder a la Activity de la Cámara
         btnCamera.setOnClickListener{ view ->
             val intent = Intent(this, ActivityImageView::class.java)
             startActivity(intent)
         }
 
-        //Cambio el color de fondo del Layout principal con el código de color especificado en la caja de texto
+        //Utilizo un Intent para acceder a la Activity de los Colores
         btnOther.setOnClickListener{ view ->
-            val colortxt = txtOther.text.toString()
-            layout.setBackgroundColor(Color.parseColor(colortxt))
+            val intent = Intent(this, ActivityColor::class.java)
+            startActivity(intent)
         }
     }
 

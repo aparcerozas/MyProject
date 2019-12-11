@@ -7,96 +7,112 @@
     tools:context=".ActivityFunction">
 
     <Button
-        android:id="@+id/btnResta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="25dp"
-        android:text="Resta"
-        app:layout_constraintBottom_toTopOf="@+id/btnProducto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSuma" />
-
-    <Button
-        android:id="@+id/btnProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="21dp"
-        android:text="Multiplicación"
-        app:layout_constraintBottom_toTopOf="@+id/btnDivision"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnResta" />
-
-    <Button
-        android:id="@+id/btnDivision"
+        android:id="@+id/btnRespond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="524dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="71dp"
-        android:text="División"
-        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        android:text="Comprobar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtQuestion3"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="10dp"
+        android:text="Suma de los 100 primeros números"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtColor3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtColor2" />
+
+    <EditText
+        android:id="@+id/txtColor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="256dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProducto" />
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion3" />
 
     <EditText
-        android:id="@+id/txtNum1"
-        android:layout_width="69dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="74dp"
+        android:id="@+id/txtColor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="388dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtNum2"
-        android:layout_width="69dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="64dp"
-        android:ems="10"
-        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion2" />
+
+    <TextView
+        android:id="@+id/txtQuestion2"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="10dp"
+        android:text="Raíz cuadrada de 81"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtColor2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 
     <EditText
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="205dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion1" />
 
-    <Button
-        android:id="@+id/btnSuma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="26dp"
-        android:text="Suma"
-        app:layout_constraintBottom_toTopOf="@+id/btnResta"
+    <TextView
+        android:id="@+id/txtQuestion1"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="8dp"
+        android:text="(14*6)/2"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityImageView"></activity>
+        <activity android:name=".ActivityColor"></activity>
+        <activity android:name=".ActivityImageView" />
         <activity android:name=".ActivityFunction" />
         <activity android:name=".MainActivity">
             <intent-filter>
