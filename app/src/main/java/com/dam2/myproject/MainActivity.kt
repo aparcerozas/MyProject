@@ -2,10 +2,8 @@ package com.dam2.myproject
 
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.browse
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Color
 
 
 val REQUEST_IMAGE_CAPTURE = 1
@@ -19,7 +17,8 @@ class MainActivity : Activity() {
 
         //Utilizo un Intent para acceder a la Activity de Internet
         btnBrowser.setOnClickListener{ view ->
-
+            val intent = Intent(this, ActivityBrowser::class.java)
+            startActivity(intent)
         }
 
         //Utilizo un Intent para acceder a la Activity de la Calculadora
